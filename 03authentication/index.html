@@ -14,7 +14,30 @@
 
 		<div class="container">
 			<!-- TODO write content here -->
+			<input type="text" ng-model="email"><br>
+			<input type="password" ng-model="password"><br>
+			<button class="btn" ng-click="correo()">
+				Login with Email and Password
+			</button><br>
 
+			<button class="btn" ng-click="anonimo()">
+				Anonimously
+			</button>
+			<button class="btn" ng-click="proveedor('google')">
+				Google
+			</button>
+			<button class="btn" ng-click="proveedor('twitter')">
+				Twitter
+			</button>
+			<button class="btn" ng-click="proveedor('github')">
+				Github
+			</button>
+			<p>OAuth:
+				<a href="#" ng-click="getInfo()">show info</a>
+				{{ authInfo }}
+			</p>
+			<p><img src="{{authInfo.photoURL}}"></p>
+			<button class="btn" ng-click="cerrar()">Signout</button>
 		</div>
 		
 		<!--Import jQuery before materialize.js-->
