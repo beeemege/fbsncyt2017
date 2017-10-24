@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<meta charset="utf-8">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+	</head>
+	<body ng-app="MyApp" ng-controller="MyController">
+
+		<div class="container">
+			<!-- TODO write content here -->
+			<input type="file" ng-model="file">
+			<br>
+			<button ng-click="cargarArchivo()">Cargar</button>
+			<p>
+				<input type="text" ng-model="fileModel.directorio">
+				<input type="text" ng-model="fileModel.archivo">
+				<button ng-click="borrar()">Delete</button>
+				<button ng-click="dameUrl()">URL</button>
+				<button ng-click="dameMetadata()">Metadata</button>
+			</p>
+			<p>{{fileModel}}</p>
+		</div>
+		
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<!-- Compiled and minified Materialize -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<!-- Init jQuery objects -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			});
+		</script>
+		<!-- Latest and minified AngularJS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+		<!-- Latest Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyBV-Ld-bXZ5kv5wMfHYAnzvhcbKOn6F3OM",
+			    authDomain: "tallersncyt.firebaseapp.com",
+			    databaseURL: "https://tallersncyt.firebaseio.com",
+			    projectId: "tallersncyt",
+			    storageBucket: "tallersncyt.appspot.com",
+			    messagingSenderId: "887854075457"
+			  };
+			firebase.initializeApp(config);
+		</script>
+		<!-- Compiled and minified AngularFire -->
+		<script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+		<!-- angular-file-input -->
+		<script type="text/javascript" src="angular-file-input.js"></script>
+		<!-- application.js -->
+		<script type="text/javascript" src="application.js"></script>
+	</body>
+</html>

@@ -41,24 +41,4 @@ app.controller('MyController', function($scope, $window, $firebaseArray, $fireba
 		});
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
