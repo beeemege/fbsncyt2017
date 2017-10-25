@@ -27,6 +27,8 @@ app.controller('MyController', function($scope, $window, $firebaseArray, $fireba
 	$scope.proveedor = function(provider){
 		auth.$signInWithPopup(provider).then(function(firebaseUser){
 			$scope.authInfo = firebaseUser;
+			console.log(firebaseUser);
+			console.log(firebaseUser.user.displayName);
 		}).catch(function(error){
 			console.log(error);
 		});
